@@ -1,5 +1,7 @@
 # eslint-config-nodecraft
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nodecraft/eslint-config-nodecraft.svg)](https://greenkeeper.io/)
+
 This package is modeled heavily off of [Airbnb's base config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base). A huge thanks to their team.
 
 ## Usage
