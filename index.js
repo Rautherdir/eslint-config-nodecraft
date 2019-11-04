@@ -1,6 +1,6 @@
 "use strict";
 
-var extendData = ["eslint:recommended", "plugin:node/recommended"];
+var extendData = ["eslint:recommended", "plugin:node/recommended", "plugin:@typescript-eslint/eslint-recommended"];
 var internalExtends = [
 	"./rules/best-practices",
 	"./rules/errors",
@@ -26,5 +26,21 @@ module.exports = {
 	"env": {
 		"browser": true,
 		"node": true
-	}
+	},
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx"],
+			"parser": "@typescript-eslint/parser",
+			"plugins": [
+				"json",
+				"node",
+				"@typescript-eslint"
+			],
+			"settings": {
+				"node": {
+					"tryExtensions": [".ts", ".tsx", "json"]
+				}
+			}
+		}
+	]
 };

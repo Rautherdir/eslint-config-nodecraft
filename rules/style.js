@@ -90,6 +90,10 @@ module.exports = {
 				"class": {
 					"before": true,
 					"after": true
+				},
+				"extends": {
+					"before": true,
+					"after": true
 				}
 			}
 		}],
@@ -98,5 +102,25 @@ module.exports = {
 
 		// disallow or enforce spaces inside of parentheses
 		"space-in-parens": ["error", "never"]
-	}
+	},
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx"],
+			"rules": {
+				// Rules overriden by typescript-eslint
+				"brace-style": "off",
+				"@typescript-eslint/brace-style": ["error", "1tbs", {
+					"allowSingleLine": true
+				}],
+
+				"func-call-spacing": "off",
+				"@typescript-eslint/func-call-spacing": "error",
+
+				"indent": "off",
+				"@typescript-eslint/indent": ["error", "tab", {
+					"SwitchCase": 1
+				}],
+			}
+		}
+	]
 };

@@ -46,5 +46,15 @@ module.exports = {
 				"typeof": false
 			}
 		}]
-	}
+	},
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx"],
+			"rules": {
+				// Rules overriden by typescript-eslint
+				"semi": "off",
+				"@typescript-eslint/semi": "error"
+			}
+		}
+	]
 };
